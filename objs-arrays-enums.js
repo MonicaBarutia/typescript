@@ -1,3 +1,4 @@
+"use strict";
 // const person: {
 //     name: string;
 //     age: number;
@@ -25,7 +26,7 @@ var person = {
     name: 'Monica',
     age: 25,
     hobbies: ['sports', 'cooking'],
-    role: Role.ADMIN
+    role: Role.ADMIN,
 };
 // person.role.push('admin');   // Not error, it doesn't work with push()
 // person.role[1] = 10;     // Error
