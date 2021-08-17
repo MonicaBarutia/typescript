@@ -1,11 +1,14 @@
 "use strict";
 class Department {
-    constructor(name) {
-        this.employees = [];
+    constructor(id, name) {
+        this.id = id;
         this.name = name;
+        // private name: string;
+        this.employees = [];
+        // this.name = name;
     }
     describe() {
-        console.log('Department: ' + this.name);
+        console.log(`Department (${this.id}): ${this.name}`);
     }
     addEmployee(employee) {
         this.employees.push(employee);
@@ -15,7 +18,7 @@ class Department {
         console.log(this.employees);
     }
 }
-const accounting = new Department('Accounting');
+const accounting = new Department('d1', 'Accounting');
 console.log(accounting);
 accounting.describe();
 // const accountingCopy = { name: 'Dummy', describe: accounting.describe}
