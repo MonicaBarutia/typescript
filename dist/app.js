@@ -1,5 +1,8 @@
 "use strict";
-const button = document.querySelector('button');
-button.addEventListener('click', () => {
-    console.log("Clicked!");
-});
+class Department {
+    constructor(name) {
+        this.name = name;
+    }
+}
+const accounting = new Department('Accounting');
+console.log(accounting);
