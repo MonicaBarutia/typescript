@@ -1,6 +1,6 @@
 "use strict";
-var userInput;
-var username;
+let userInput;
+let username;
 userInput = 5;
 userInput = 'Max';
 if (typeof userInput === 'string') {
