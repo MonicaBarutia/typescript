@@ -19,6 +19,8 @@ const fetchedUSerData = {
     job: { title: 'CEO', description: 'My own compaany' }
 };
 console.log((_a = fetchedUSerData === null || fetchedUSerData === void 0 ? void 0 : fetchedUSerData.job) === null || _a === void 0 ? void 0 : _a.title);
+const userInput = null;
+const storedData = userInput !== null && userInput !== void 0 ? userInput : "DEFAULT";
 // type UnknownEmployee = Employee | Admin;
 //
 // function printEmployeeInformation(emp: UnknownEmployee) {
