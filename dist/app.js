@@ -49,11 +49,13 @@ textStorage.addItem('Manu');
 textStorage.removeItem('Max');
 console.log(textStorage.getItems());
 const numberStorage = new DataStorage();
-// const objStorage = new DataStorage<object>();
-// const maxObj = {name: 'Max'};
-// const manuObj = {name: 'Manu'};
-// objStorage.addItem(maxObj);
-// objStorage.addItem(manuObj);
-// // ...
-// objStorage.removeItem(maxObj);
-// console.log(objStorage.getItems());
+function createCourseGoal(title, description, date) {
+    let courseGoal = {};
+    courseGoal.title = title;
+    courseGoal.description = description;
+    courseGoal.completeUntil = date;
+    return courseGoal;
+}
+const names = ['Max', 'Anna']; //cannot modify this
+// names.push('Manu');
+// names.pop();
