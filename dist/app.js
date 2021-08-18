@@ -1,4 +1,5 @@
 "use strict";
+var _a;
 const e1 = {
     name: 'John',
     privileges: ['create-server'],
@@ -12,6 +13,12 @@ function add(a, b) {
 }
 const result = add('Max', 'Schwarz');
 result.split(' ');
+const fetchedUSerData = {
+    id: 'u1',
+    name: 'Max',
+    job: { title: 'CEO', description: 'My own compaany' }
+};
+console.log((_a = fetchedUSerData === null || fetchedUSerData === void 0 ? void 0 : fetchedUSerData.job) === null || _a === void 0 ? void 0 : _a.title);
 // type UnknownEmployee = Employee | Admin;
 //
 // function printEmployeeInformation(emp: UnknownEmployee) {
