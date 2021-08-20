@@ -8,13 +8,17 @@ function Logger(logString: string) {
 
 function WithTemplate(template: string, hookId: string) {
     console.log('TEMPLATE FACTORY');
-    return function(constructor: any) {      // _ = stiu ca exista acest param, dar nu o sa-l folosesc
-        console.log('Rendering template');
-        const hookEl = document.getElementById(hookId);
-        const p = new constructor();
-        if (hookEl) {
-            hookEl.innerHTML = template;
-            hookEl.querySelector('h1')!.textContent = p.name;
+    return function<T extends {new(...args: any[]): {name: string}}>(originalConstructor: T) {      // _ = stiu ca exista acest param, dar nu o sa-l folosesc
+        return class extends originalConstructor {      // returneaza de fapt un constructor
+            constructor(...args: any[]) {
+                super();
+                console.log('Rendering template');
+                const hookEl = document.getElementById(hookId);
+                if (hookEl) {
+                    hookEl.innerHTML = template;
+                    hookEl.querySelector('h1')!.textContent = this.name;
+                }
+            }
         }
     }
 }
